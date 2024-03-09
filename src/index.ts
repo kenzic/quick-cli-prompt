@@ -7,7 +7,7 @@ const rl = readline.createInterface({
 
 async function quickCLIPrompt(onInput: (input: string) => Promise<void>) {
   rl.question('Enter input (type "!@!" to quit): ', async (input) => {
-    if (input.toLowerCase() === "exit") {
+    if (input.toLowerCase() === "!@!") {
       rl.close();
     } else {
       await onInput(input)
